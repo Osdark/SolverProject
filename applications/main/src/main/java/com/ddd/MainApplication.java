@@ -1,4 +1,4 @@
-package com.ddd.main;
+package com.ddd;
 
 /*import org.reactivecommons.async.impl.config.annotations.EnableDirectAsyncGateway;
 import org.reactivecommons.async.impl.config.annotations.EnableMessageListeners;*/
