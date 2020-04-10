@@ -4,11 +4,13 @@ import lombok.*;
 
 @Getter
 @Builder(toBuilder = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
 
-    private final String id;
-    private final String nombre;
-    private final String edad;
-    private final String celular;
+    private String id;
+    private String nombre;
+    private String edad;
+    private String celular;
 
 }
