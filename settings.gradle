@@ -1,4 +1,4 @@
-rootProject.name = 'pruebaDDD'
+rootProject.name = 'Solver'
 FileTree buildFiles = fileTree(rootDir) {
 	List excludes = gradle.startParameter.projectProperties.get("excludeProjects")?.split(",")
 	include '**/*.gradle'

@@ -1,6 +1,6 @@
 dependencies {
-	compile 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+	compile ("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
 	compile("org.springframework.boot:spring-boot-starter-cache")
-	compile 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok:1.18.12'
 	compile project(':domain-model')
 }
