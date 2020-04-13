@@ -7,7 +7,7 @@ import lombok.*;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class File {
+public class ProjectFile {
     private Integer days;
     private WorkDay[] workDays;
 }

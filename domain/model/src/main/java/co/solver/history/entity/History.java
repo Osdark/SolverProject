@@ -1,6 +1,6 @@
 package co.solver.history.entity;
 
-import co.solver.file.entity.File;
+import co.solver.file.entity.ProjectFile;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class History {
     private String id;
-    private File file;
+    private ProjectFile projectFile;
     private String userId;
 }

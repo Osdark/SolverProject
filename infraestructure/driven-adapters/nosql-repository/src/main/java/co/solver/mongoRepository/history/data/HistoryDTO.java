@@ -1,6 +1,6 @@
 package co.solver.mongoRepository.history.data;
 
-import co.solver.file.entity.File;
+import co.solver.file.entity.ProjectFile;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +14,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "History")
 public class HistoryDTO {
     private String id;
-    private File file;
+    private ProjectFile projectFile;
     private String userId;
 }

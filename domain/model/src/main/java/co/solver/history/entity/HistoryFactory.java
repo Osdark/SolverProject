@@ -1,11 +1,11 @@
 package co.solver.history.entity;
 
-import co.solver.file.entity.File;
+import co.solver.file.entity.ProjectFile;
 
 public interface HistoryFactory {
-    default History createHistory(File file, String userId) {
+    default History createHistory(ProjectFile projectFile, String userId) {
         return History.builder()
-                .file(file)
+                .projectFile(projectFile)
                 .userId(userId)
                 .build();
     }

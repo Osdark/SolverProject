@@ -2,13 +2,14 @@ package co.solver.configuration;
 
 import co.solver.bag.BagUseCase;
 import co.solver.bag.gateway.BagRepository;
-import co.solver.file.FileUseCase;
-import co.solver.file.gateway.FileRepository;
+import co.solver.file.ProjectFileUseCase;
+import co.solver.file.gateway.ProjectFileRepository;
 import co.solver.history.HistoryUseCase;
 import co.solver.history.gateway.HistoryRepository;
-import co.solver.mapper.ObjectMapper;
 import co.solver.workDay.WorkDayUseCase;
 import co.solver.workDay.gateway.WorkDayRepository;
+import org.reactivecommons.utils.ObjectMapper;
+import org.reactivecommons.utils.ObjectMapperImp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,8 +22,8 @@ public class UseCaseConfiguration {
     }
 
     @Bean
-    public FileUseCase fileUseCase(FileRepository fileRepository) {
-        return new FileUseCase(fileRepository);
+    public ProjectFileUseCase fileUseCase(ProjectFileRepository projectFileRepository) {
+        return new ProjectFileUseCase(projectFileRepository);
     }
 
     @Bean
@@ -37,17 +38,7 @@ public class UseCaseConfiguration {
 
     @Bean
     public ObjectMapper objectMapper() {
-        return new ObjectMapper() {
-            @Override
-            public <T> T map(Object src, Class<T> target) {
-                return null;
-            }
-
-            @Override
-            public <T> T mapBuilder(Object src, Class<T> target) {
-                return null;
-            }
-        };
+        return new ObjectMapperImp();
     }
 
 }
