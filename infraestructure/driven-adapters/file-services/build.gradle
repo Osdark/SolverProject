@@ -1,0 +1,6 @@
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-cache")
+    compile 'org.reactivecommons.utils:object-mapper:0.1.0'
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    compile project(':domain-model')
+}

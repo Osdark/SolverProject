@@ -1,13 +1,17 @@
 package co.solver.file.entity;
 
 import co.solver.workDay.entity.WorkDay;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProjectFile {
-    private Integer days;
-    private WorkDay[] workDays;
+    private List<WorkDay> workDays;
 }
